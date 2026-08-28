@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Nova rénovation</h1>
+
+        <button class="menu-toggle">☰</button>
+
+
+        <nav class="accueil">
+
+            <a href="index.html">accueil</a>
+            <a href="services.html">Services</a>
+            <a href="realisations.html">Realisations</a>
+            <a href="contact.html">contact</a>
+
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="intro-contact">
+
+            <h2>Contactez-nous</h2>
+
+            <p>
+                Vous avez un projet de rénovation ?
+                Écrivez-nous pour obtenir votre devis gratuit.
+            </p>
+
+        </section>
+
+        <section class="contact">
+
+            <div class="infos-contact">
+
+                <h3>Nos coordonnées</h3>
+
+                <p>
+                    <strong>Téléphone :</strong><br>
+                    06 00 00 00 00
+                </p>
+
+                <p>
+                    <strong>Email :</strong><br>
+                    contact@novarenovation.fr
+                </p>
+
+                <p>
+                    <strong>Horaires :</strong><br>
+                    Lundi - Vendredi<br>
+                    8h - 18h
+                </p>
+
+            </div>
+
+            <form class="formulaire-contact" action="https://formspree.io/f/mgaeenqj" method="POST">
+
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone">
+
+                <label for="projet">Type de projet</label>
+
+                <select id="projet" name="projet" required>
+                    <option value="">Choisissez un service</option>
+                    <option value="renovation">Rénovation intérieure</option>
+                    <option value="peinture">Peinture</option>
+                    <option value="sol">Revêtement de sol</option>
+                    <option value="autre">Autre</option>
+                </select>
+
+                <label for="message">Votre message</label>
+
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Envoyer ma demande</button>
+
+                <p class="message-confirmation"></p>
+
+            </form>
+
+
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Nova Rénovation</p>
+        <p>Votre projet, notre savoir-faire.</p>
+
+    </footer>
+
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

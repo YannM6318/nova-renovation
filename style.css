@@ -1,0 +1,567 @@
+body {
+    background-color: #f2f2f2;
+    color: black;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #222222;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.accueil {
+    display: flex;
+    gap: 25px;
+}
+
+.accueil a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.accueil a:hover {
+    color: #e67e22;
+}
+
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("images/hero-renovation.jpg");
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 15px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.hero a:hover {
+    background-color: #c96810;
+    transform: scale(1.05)
+}
+
+.Liste-services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    background-color: white;
+    color: #222;
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+    border-top: 4px solid #e67e22;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.avantages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.avantage {
+    background-color: #2b2b2b;
+    color: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.avantage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icone-avantage {
+    font-size: 32px;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.icone-avantage svg {
+    width: 35px;
+    height: 35px;
+    fill: none;
+    stroke: #e67e22;
+    stroke-width: 2;
+}
+
+.services {
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.pourquoi-nous {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .accueil {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .accueil.ouvert {
+        display: flex;
+
+    }
+
+    .Liste-services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avantages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .galerie-realisations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galerie-realisations img {
+        width: 90%;
+        height: auto;
+    }
+
+    .service-detail,
+    .service-detail.inverse {
+        flex-direction: column;
+    }
+
+    .service-detail img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .texte-service {
+        width: auto;
+        padding: 25px;
+    }
+
+}
+
+.galerie-realisations {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galerie-realisations img {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.galerie-realisations img:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.realisations-accueil {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.bouton-realisations {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 25px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.bouton-realisations:hover {
+    background-color: #c96510;
+    transform: scale(1.05);
+}
+
+.services-detail {
+    padding: 40px 20px;
+    background-color: #e9e9e9;
+
+}
+
+.service-detail {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.service-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-detail img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.texte-service {
+    width: 50%;
+    padding: 30px;
+}
+
+.intro-services {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.intro-services h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.intro-services p {
+    color: #555;
+}
+
+.services-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-detail.inverse {
+    flex-direction: row-reverse;
+}
+
+.cta-services,
+.cta-realisations {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+.cta-services h2,
+.cta-realisations h2 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.cta-services p,
+.cta-realisations p {
+    margin-bottom: 25px;
+}
+
+.cta-services a,
+.cta-realisations a {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cta-services a:hover,
+.cta-realisations a:hover {
+    background-color: #c96510;
+    transform: scale(1.05);
+}
+
+.intro-realisations {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.intro-realisations h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.intro-realisations p {
+    color: #555;
+}
+
+.galerie-projets {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projet {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.projet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.projet img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.info-projet {
+    padding: 20px;
+}
+
+.info-projet h3 {
+    margin-top: 0;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox.ouverte {
+    display: flex;
+}
+
+.image-lightbox {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+.fermer-lightbox {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .galerie-projets {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .projet img {
+        height: 230px;
+    }
+
+    .image-lightbox {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .fermer-lightbox {
+        top: 15px;
+        right: 20px;
+    }
+
+    .contact {
+    flex-direction: column;
+    align-items: center;
+}
+
+.infos-contact {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulaire-contact {
+    width: 100%;
+    box-sizing: border-box;
+}
+}
+
+.intro-contact {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.intro-contact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.intro-contact p {
+    color: #555;
+}
+
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.infos-contact {
+    width: 300px;
+    background-color: #222;
+    color: white;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.infos-contact h3 {
+    color: #e67e22;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.infos-contact p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.formulaire-contact {
+    flex: 1;
+}
+
+.formulaire-contact {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulaire-contact label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formulaire-contact input,
+.formulaire-contact select,
+.formulaire-contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.formulaire-contact textarea {
+    resize: vertical;
+}
+
+.formulaire-contact button {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulaire-contact button:hover {
+    background-color: #c96510;
+    transform: scale(1.02);
+}
+
+.message-confirmation {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
